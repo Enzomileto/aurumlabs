@@ -1,78 +1,54 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { 
-  Clock, 
-  DollarSign, 
-  TrendingUp, 
-  Users, 
-  Shield, 
-  Smartphone,
-  Brain,
-  Target
-} from "lucide-react";
-
+import { Clock, DollarSign, TrendingUp, Users, Shield, Smartphone, Brain, Target } from "lucide-react";
 const Vantagens = () => {
-  const problems = [
-    {
-      icon: Clock,
-      title: "Perda de Leads por Demora",
-      description: "73% dos leads desistem quando não recebem resposta em até 1 hora",
-      impact: "Perda de R$ 15.000+ mensais"
-    },
-    {
-      icon: Users,
-      title: "Equipe Sobrecarregada",
-      description: "Recepcionistas gastam 60% do tempo com tarefas repetitivas",
-      impact: "Baixa produtividade"
-    },
-    {
-      icon: Target,
-      title: "Leads Não Qualificados",
-      description: "45% das consultas agendadas são de pessoas sem perfil ideal",
-      impact: "Agenda ocupada sem resultado"
-    }
-  ];
-
-  const benefits = [
-    {
-      icon: Smartphone,
-      title: "Resposta Instantânea",
-      description: "IA responde em menos de 3 segundos, 24/7, capturando 100% dos leads",
-      result: "+300% em captura de leads"
-    },
-    {
-      icon: Brain,
-      title: "Qualificação Inteligente",
-      description: "Filtra automaticamente leads com maior potencial de conversão",
-      result: "+180% em taxa de fechamento"
-    },
-    {
-      icon: DollarSign,
-      title: "ROI Comprovado",
-      description: "Cada R$ 1 investido retorna em média R$ 8 em novos faturamentos",
-      result: "ROI de 800%"
-    },
-    {
-      icon: TrendingUp,
-      title: "Escalabilidade",
-      description: "Atende milhares de leads simultaneamente sem custo adicional",
-      result: "Crescimento ilimitado"
-    },
-    {
-      icon: Shield,
-      title: "Dados Seguros",
-      description: "Compliance total com LGPD e criptografia de ponta a ponta",
-      result: "100% de segurança"
-    },
-    {
-      icon: Clock,
-      title: "Economia de Tempo",
-      description: "Automatiza 90% das tarefas repetitivas da recepção",
-      result: "-6h diárias de trabalho manual"
-    }
-  ];
-
-  return (
-    <section id="vantagens" className="py-20 bg-gradient-to-br from-night-graphite to-muted">
+  const problems = [{
+    icon: Clock,
+    title: "Perda de Leads por Demora",
+    description: "73% dos leads desistem quando não recebem resposta em até 1 hora",
+    impact: "Perda de R$ 15.000+ mensais"
+  }, {
+    icon: Users,
+    title: "Equipe Sobrecarregada",
+    description: "Recepcionistas gastam 60% do tempo com tarefas repetitivas",
+    impact: "Baixa produtividade"
+  }, {
+    icon: Target,
+    title: "Leads Não Qualificados",
+    description: "45% das consultas agendadas são de pessoas sem perfil ideal",
+    impact: "Agenda ocupada sem resultado"
+  }];
+  const benefits = [{
+    icon: Smartphone,
+    title: "Resposta Instantânea",
+    description: "IA responde em menos de 3 segundos, 24/7, capturando 100% dos leads",
+    result: "+300% em captura de leads"
+  }, {
+    icon: Brain,
+    title: "Qualificação Inteligente",
+    description: "Filtra automaticamente leads com maior potencial de conversão",
+    result: "+180% em taxa de fechamento"
+  }, {
+    icon: DollarSign,
+    title: "ROI Comprovado",
+    description: "Cada R$ 1 investido retorna em média R$ 8 em novos faturamentos",
+    result: "ROI de 800%"
+  }, {
+    icon: TrendingUp,
+    title: "Escalabilidade",
+    description: "Atende milhares de leads simultaneamente sem custo adicional",
+    result: "Crescimento ilimitado"
+  }, {
+    icon: Shield,
+    title: "Dados Seguros",
+    description: "Compliance total com LGPD e criptografia de ponta a ponta",
+    result: "100% de segurança"
+  }, {
+    icon: Clock,
+    title: "Economia de Tempo",
+    description: "Automatiza 90% das tarefas repetitivas da recepção",
+    result: "-6h diárias de trabalho manual"
+  }];
+  return <section id="vantagens" className="py-20 bg-gradient-to-br from-night-graphite to-muted">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">
@@ -102,8 +78,7 @@ const Vantagens = () => {
           </h3>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {problems.map((problem, index) => (
-              <Card key={index} className="bg-red-900/20 border-red-400/30 hover:border-red-400/50 transition-all duration-300">
+            {problems.map((problem, index) => <Card key={index} className="bg-red-900/20 border-red-400/30 hover:border-red-400/50 transition-all duration-300">
                 <CardContent className="p-6">
                   <div className="bg-red-400/10 border border-red-400/20 rounded-xl p-3 w-fit mb-4">
                     <problem.icon className="h-6 w-6 text-red-400" />
@@ -123,8 +98,7 @@ const Vantagens = () => {
                     </span>
                   </div>
                 </CardContent>
-              </Card>
-            ))}
+              </Card>)}
           </div>
         </div>
 
@@ -135,8 +109,7 @@ const Vantagens = () => {
           </h3>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {benefits.map((benefit, index) => (
-              <Card key={index} className="bg-gold-core/5 border-gold-core/30 hover:border-gold-core/50 hover:bg-gold-core/10 transition-all duration-300 group">
+            {benefits.map((benefit, index) => <Card key={index} className="bg-gold-core/5 border-gold-core/30 hover:border-gold-core/50 hover:bg-gold-core/10 transition-all duration-300 group">
                 <CardContent className="p-6">
                   <div className="bg-gold-core/10 border border-gold-core/20 rounded-xl p-3 w-fit mb-4 group-hover:bg-gold-core/20 transition-colors">
                     <benefit.icon className="h-6 w-6 text-gold-core" />
@@ -156,8 +129,7 @@ const Vantagens = () => {
                     </span>
                   </div>
                 </CardContent>
-              </Card>
-            ))}
+              </Card>)}
           </div>
         </div>
 
@@ -197,14 +169,10 @@ const Vantagens = () => {
             <div className="text-3xl font-bold text-gold-core mb-2">
               R$ 110.000 de diferença mensal
             </div>
-            <div className="text-night-graphite/80 font-body">
-              Investimento: R$ 2.500/mês | ROI: 4.400%
-            </div>
+            <div className="text-night-graphite/80 font-body">ROI: 4.400%</div>
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Vantagens;
