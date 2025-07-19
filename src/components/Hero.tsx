@@ -24,7 +24,7 @@ const Hero = () => {
       <div className="relative container mx-auto px-4 text-center z-10">
         <div className="max-w-5xl mx-auto">
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 bg-gold-core/10 border border-gold-core/30 rounded-full px-6 py-2 mb-8 mx-0 my-[20px]">
+          <div className="inline-flex items-center gap-2 bg-gold-core/10 border border-gold-core/30 rounded-full mb-8 mx-0 my-[21px] py-[30px] px-[20px]">
             <Sparkles className="h-4 w-4 text-gold-core" />
             <span className="text-gold-core font-body font-medium">
               Revolucione sua Clínica de Estética
@@ -32,7 +32,7 @@ const Hero = () => {
           </div>
 
           {/* Main Headline */}
-          <h1 className="font-heading text-5xl md:text-7xl lg:text-8xl text-ivory-glow mb-6 leading-tight">
+          <h1 className="font-heading text-5xl md:text-7xl text-ivory-glow mb-6 leading-tight font-bold lg:text-7xl">
             Multiplique suas
             <span className="block text-gold-core">
               Conversões
