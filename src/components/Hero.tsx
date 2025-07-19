@@ -1,16 +1,15 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Sparkles, TrendingUp } from "lucide-react";
-
 const Hero = () => {
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({
+        behavior: 'smooth'
+      });
     }
   };
-
-  return (
-    <section id="hero" className="relative min-h-screen bg-gradient-hero flex items-center justify-center overflow-hidden">
+  return <section id="hero" className="relative min-h-screen bg-gradient-hero flex items-center justify-center overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 bg-gradient-to-br from-night-graphite via-night-graphite to-muted opacity-90"></div>
       
@@ -25,7 +24,7 @@ const Hero = () => {
       <div className="relative container mx-auto px-4 text-center z-10">
         <div className="max-w-5xl mx-auto">
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 bg-gold-core/10 border border-gold-core/30 rounded-full px-6 py-2 mb-8">
+          <div className="inline-flex items-center gap-2 bg-gold-core/10 border border-gold-core/30 rounded-full px-6 py-2 mb-8 mx-0 my-[20px]">
             <Sparkles className="h-4 w-4 text-gold-core" />
             <span className="text-gold-core font-body font-medium">
               Revolucione sua Clínica de Estética
@@ -65,28 +64,18 @@ const Hero = () => {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button 
-              variant="hero" 
-              size="lg"
-              onClick={() => scrollToSection('cta')}
-              className="group"
-            >
+            <Button variant="hero" size="lg" onClick={() => scrollToSection('cta')} className="group">
               Agendar Reunião de Triagem
               <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
             </Button>
             
-            <Button 
-              variant="outline" 
-              size="lg"
-              onClick={() => scrollToSection('demonstracao')}
-              className="border-gold-core text-gold-core hover:bg-gold-core hover:text-night-graphite"
-            >
+            <Button variant="outline" size="lg" onClick={() => scrollToSection('demonstracao')} className="border-gold-core text-gold-core hover:bg-gold-core hover:text-night-graphite">
               Ver Demonstração
             </Button>
           </div>
 
           {/* Trust Indicators */}
-          <div className="mt-16 flex flex-col items-center">
+          <div className="mt-16 flex flex-col items-center my-[60px]">
             <p className="text-ivory-glow/60 font-body text-sm mb-4">
               Confiado por clínicas premium em todo Brasil
             </p>
@@ -107,8 +96,6 @@ const Hero = () => {
           <div className="w-1 h-3 bg-gold-core rounded-full mt-2"></div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Hero;
