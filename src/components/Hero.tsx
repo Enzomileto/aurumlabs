@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Sparkles, TrendingUp } from "lucide-react";
+
 const Hero = () => {
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -9,16 +10,18 @@ const Hero = () => {
       });
     }
   };
-  return <section id="hero" className="relative min-h-screen bg-gradient-hero flex items-center justify-center overflow-hidden">
+
+  return (
+    <section id="hero" className="relative min-h-screen bg-gradient-hero flex items-center justify-center overflow-hidden pt-20 md:pt-16">
       {/* Background Pattern */}
       <div className="absolute inset-0 bg-gradient-to-br from-night-graphite via-night-graphite to-muted opacity-90"></div>
       
       {/* Floating Elements */}
-      <div className="absolute top-20 left-10 animate-pulse">
-        <Sparkles className="h-8 w-8 text-gold-core opacity-60" />
+      <div className="absolute top-32 left-10 animate-pulse md:top-20">
+        <Sparkles className="h-6 w-6 md:h-8 md:w-8 text-gold-core opacity-60" />
       </div>
-      <div className="absolute bottom-40 right-20 animate-pulse delay-1000">
-        <TrendingUp className="h-12 w-12 text-gold-core opacity-40" />
+      <div className="absolute bottom-40 right-10 md:right-20 animate-pulse delay-1000">
+        <TrendingUp className="h-8 w-8 md:h-12 md:w-12 text-gold-core opacity-40" />
       </div>
 
       <div className="relative container mx-auto px-4 text-center z-10">
@@ -75,7 +78,7 @@ const Hero = () => {
           </div>
 
           {/* Trust Indicators */}
-          <div className="mt-16 flex flex-col items-center my-[60px]">
+          <div className="mt-16 flex flex-col items-center my-[60px] relative z-20">
             <p className="text-ivory-glow/60 font-body text-sm mb-4">
               Confiado por clínicas premium em todo Brasil
             </p>
@@ -96,6 +99,8 @@ const Hero = () => {
           <div className="w-1 h-3 bg-gold-core rounded-full mt-2"></div>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default Hero;
