@@ -181,22 +181,6 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Final CTA */}
-        <div className="mt-12 text-center">
-          <Card className="bg-gradient-card shadow-elegant border-gold-core/20">
-            <CardContent className="p-8">
-              <h3 className="font-heading text-2xl text-night-graphite mb-4">
-                Pronto para Revolucionar sua Clínica?
-              </h3>
-              <p className="font-body text-night-graphite/80 mb-6">
-                Agende sua reunião gratuita e descubra como multiplicar seus resultados.
-              </p>
-              <Button variant="premium" size="lg" onClick={() => scrollToSection('cta')}>
-                Agendar Reunião Agora
-              </Button>
-            </CardContent>
-          </Card>
-        </div>
       </div>
     </footer>;
 };
