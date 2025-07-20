@@ -1,26 +1,17 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { 
-  Shield,
-  Mail,
-  Phone,
-  MapPin,
-  Instagram,
-  Linkedin,
-  ExternalLink
-} from "lucide-react";
+import { Shield, Mail, Phone, MapPin, Instagram, Linkedin, ExternalLink } from "lucide-react";
 import aurumLogo from "@/assets/aurum-logo.png";
-
 const Footer = () => {
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({
+        behavior: 'smooth'
+      });
     }
   };
-
-  return (
-    <footer id="contato" className="bg-ivory-glow pt-20 pb-8">
+  return <footer id="contato" className="bg-ivory-glow pt-20 pb-8">
       <div className="container mx-auto px-4">
         {/* LGPD Notice */}
         <Card className="mb-16 shadow-card border-gold-core/20">
@@ -75,31 +66,17 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           {/* Company Info */}
           <div>
-            <img 
-              src={aurumLogo} 
-              alt="Aurum" 
-              className="h-12 w-auto mb-6"
-            />
+            <img src={aurumLogo} alt="Aurum" className="h-12 w-auto mb-6" />
             <p className="font-body text-night-graphite/80 text-sm leading-relaxed mb-6">
               Especialistas em IA para clínicas de estética premium. 
               Multiplicamos seu faturamento com tecnologia de ponta 
               e suporte humanizado.
             </p>
             <div className="flex gap-3">
-              <a 
-                href="https://instagram.com/aurum.ai" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="bg-gold-core/10 border border-gold-core/20 rounded-full p-2 hover:bg-gold-core/20 transition-colors"
-              >
+              <a href="https://instagram.com/aurum.ai" target="_blank" rel="noopener noreferrer" className="bg-gold-core/10 border border-gold-core/20 rounded-full p-2 hover:bg-gold-core/20 transition-colors">
                 <Instagram className="h-4 w-4 text-gold-core" />
               </a>
-              <a 
-                href="https://linkedin.com/company/aurum-ai" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="bg-gold-core/10 border border-gold-core/20 rounded-full p-2 hover:bg-gold-core/20 transition-colors"
-              >
+              <a href="https://linkedin.com/company/aurum-ai" target="_blank" rel="noopener noreferrer" className="bg-gold-core/10 border border-gold-core/20 rounded-full p-2 hover:bg-gold-core/20 transition-colors">
                 <Linkedin className="h-4 w-4 text-gold-core" />
               </a>
             </div>
@@ -111,34 +88,19 @@ const Footer = () => {
               Navegação
             </h4>
             <nav className="space-y-3">
-              <button 
-                onClick={() => scrollToSection('hero')}
-                className="block font-body text-night-graphite/70 hover:text-gold-core transition-colors text-sm"
-              >
+              <button onClick={() => scrollToSection('hero')} className="block font-body text-night-graphite/70 hover:text-gold-core transition-colors text-sm">
                 Início
               </button>
-              <button 
-                onClick={() => scrollToSection('demonstracao')}
-                className="block font-body text-night-graphite/70 hover:text-gold-core transition-colors text-sm"
-              >
+              <button onClick={() => scrollToSection('demonstracao')} className="block font-body text-night-graphite/70 hover:text-gold-core transition-colors text-sm">
                 Como Funciona
               </button>
-              <button 
-                onClick={() => scrollToSection('vantagens')}
-                className="block font-body text-night-graphite/70 hover:text-gold-core transition-colors text-sm"
-              >
+              <button onClick={() => scrollToSection('vantagens')} className="block font-body text-night-graphite/70 hover:text-gold-core transition-colors text-sm">
                 Vantagens
               </button>
-              <button 
-                onClick={() => scrollToSection('diferenciais')}
-                className="block font-body text-night-graphite/70 hover:text-gold-core transition-colors text-sm"
-              >
+              <button onClick={() => scrollToSection('diferenciais')} className="block font-body text-night-graphite/70 hover:text-gold-core transition-colors text-sm">
                 Diferenciais
               </button>
-              <button 
-                onClick={() => scrollToSection('sobre')}
-                className="block font-body text-night-graphite/70 hover:text-gold-core transition-colors text-sm"
-              >
+              <button onClick={() => scrollToSection('sobre')} className="block font-body text-night-graphite/70 hover:text-gold-core transition-colors text-sm">
                 Sobre Nós
               </button>
             </nav>
@@ -168,7 +130,7 @@ const Footer = () => {
               <div className="flex items-center gap-3">
                 <Phone className="h-4 w-4 text-gold-core" />
                 <div className="font-body text-sm text-night-graphite/70">
-                  <div>(11) 99999-9999</div>
+                  <div>(21) 99363-7955</div>
                   <div className="text-xs">WhatsApp Comercial</div>
                 </div>
               </div>
@@ -176,7 +138,7 @@ const Footer = () => {
               <div className="flex items-center gap-3">
                 <Mail className="h-4 w-4 text-gold-core" />
                 <div className="font-body text-sm text-night-graphite/70">
-                  <div>contato@aurum.ai</div>
+                  <div>contatoaurumlabs@gmail.com</div>
                   <div className="text-xs">Comercial</div>
                 </div>
               </div>
@@ -184,7 +146,7 @@ const Footer = () => {
               <div className="flex items-center gap-3">
                 <MapPin className="h-4 w-4 text-gold-core" />
                 <div className="font-body text-sm text-night-graphite/70">
-                  <div>São Paulo, SP</div>
+                  <div>Rio de Janeiro, RJ</div>
                   <div className="text-xs">Atendemos todo Brasil</div>
                 </div>
               </div>
@@ -229,19 +191,13 @@ const Footer = () => {
               <p className="font-body text-night-graphite/80 mb-6">
                 Agende sua reunião gratuita e descubra como multiplicar seus resultados.
               </p>
-              <Button 
-                variant="premium" 
-                size="lg"
-                onClick={() => scrollToSection('cta')}
-              >
+              <Button variant="premium" size="lg" onClick={() => scrollToSection('cta')}>
                 Agendar Reunião Agora
               </Button>
             </CardContent>
           </Card>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;

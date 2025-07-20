@@ -1,77 +1,57 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { 
-  Zap, 
-  Award, 
-  Settings, 
-  LineChart, 
-  MessageSquare, 
-  Lock,
-  Headphones,
-  Globe
-} from "lucide-react";
-
+import { Zap, Award, Settings, LineChart, MessageSquare, Lock, Headphones, Globe } from "lucide-react";
 const Diferenciais = () => {
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({
+        behavior: 'smooth'
+      });
     }
   };
-
-  const features = [
-    {
-      icon: Zap,
-      title: "IA Especializada em Estética",
-      description: "Treinada especificamente para clínicas de estética com conhecimento em procedimentos, preços e objeções típicas do setor",
-      highlight: "100% especializada"
-    },
-    {
-      icon: MessageSquare,
-      title: "Conversas Naturais",
-      description: "Linguagem humanizada que não parece robô, adaptada ao perfil premium dos seus clientes",
-      highlight: "98% aprovação"
-    },
-    {
-      icon: Settings,
-      title: "Personalização Total",
-      description: "Configuramos a IA com a identidade da sua clínica, preços, procedimentos e tom de voz específicos",
-      highlight: "100% customizada"
-    },
-    {
-      icon: LineChart,
-      title: "Analytics Avançados",
-      description: "Dashboard completo com métricas de conversão, ROI, leads por canal e insights estratégicos",
-      highlight: "Relatórios em tempo real"
-    },
-    {
-      icon: Globe,
-      title: "Multi-Canal",
-      description: "Integração com WhatsApp, Instagram, Facebook, site e landing pages - tudo em um só lugar",
-      highlight: "Todos os canais"
-    },
-    {
-      icon: Lock,
-      title: "Segurança Premium",
-      description: "Compliance total com LGPD, criptografia ponta a ponta e dados armazenados no Brasil",
-      highlight: "LGPD compliant"
-    },
-    {
-      icon: Headphones,
-      title: "Suporte Especializado",
-      description: "Equipe dedicada de especialistas em clínicas de estética disponível 24/7",
-      highlight: "Suporte 24/7"
-    },
-    {
-      icon: Award,
-      title: "Implementação Express",
-      description: "Sua IA funcionando em 24h com treinamento personalizado para sua equipe",
-      highlight: "24h para funcionar"
-    }
-  ];
-
-  return (
-    <section id="diferenciais" className="py-20 bg-ivory-glow">
+  const features = [{
+    icon: Zap,
+    title: "IA Especializada em Estética",
+    description: "Treinada especificamente para clínicas de estética com conhecimento em procedimentos, preços e objeções típicas do setor",
+    highlight: "100% especializada"
+  }, {
+    icon: MessageSquare,
+    title: "Conversas Naturais",
+    description: "Linguagem humanizada que não parece robô, adaptada ao perfil premium dos seus clientes",
+    highlight: "98% aprovação"
+  }, {
+    icon: Settings,
+    title: "Personalização Total",
+    description: "Configuramos a IA com a identidade da sua clínica, preços, procedimentos e tom de voz específicos",
+    highlight: "100% customizada"
+  }, {
+    icon: LineChart,
+    title: "Analytics Avançados",
+    description: "Dashboard completo com métricas de conversão, ROI, leads por canal e insights estratégicos",
+    highlight: "Relatórios em tempo real"
+  }, {
+    icon: Globe,
+    title: "Multi-Canal",
+    description: "Integração com WhatsApp, Instagram, Facebook, site e landing pages - tudo em um só lugar",
+    highlight: "Todos os canais"
+  }, {
+    icon: Lock,
+    title: "Segurança Premium",
+    description: "Compliance total com LGPD, criptografia ponta a ponta e dados armazenados no Brasil",
+    highlight: "LGPD compliant"
+  }, {
+    icon: Headphones,
+    title: "Suporte Especializado",
+    description: "Equipe dedicada de especialistas em clínicas de estética disponível 24/7",
+    highlight: "Suporte 24/7"
+  }, {
+    icon: Award,
+    title: "Implementação Express",
+    description: "Sua IA funcionando em 24h com treinamento personalizado para sua equipe",
+    highlight: "24h para funcionar"
+  }];
+  return <section id="diferenciais" className="py-20 bg-ivory-glow">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">
@@ -95,8 +75,7 @@ const Diferenciais = () => {
 
         {/* Features Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-16">
-          {features.map((feature, index) => (
-            <Card key={index} className="relative overflow-hidden shadow-card border-gold-core/20 hover:shadow-elegant transition-all duration-300 group hover:scale-105">
+          {features.map((feature, index) => <Card key={index} className="relative overflow-hidden shadow-card border-gold-core/20 hover:shadow-elegant transition-all duration-300 group hover:scale-105">
               <CardContent className="p-6">
                 {/* Icon */}
                 <div className="bg-gold-core/10 border border-gold-core/20 rounded-xl p-3 w-fit mb-4 group-hover:bg-gold-core/20 transition-colors">
@@ -123,8 +102,7 @@ const Diferenciais = () => {
                 {/* Hover Effect */}
                 <div className="absolute inset-0 bg-gradient-gold opacity-0 group-hover:opacity-5 transition-opacity duration-300"></div>
               </CardContent>
-            </Card>
-          ))}
+            </Card>)}
         </div>
 
         {/* Comparison Table */}
@@ -153,7 +131,7 @@ const Diferenciais = () => {
                   </td>
                 </tr>
                 <tr className="border-b border-gold-core/10">
-                  <td className="py-4 text-night-graphite">Implementação em 24h</td>
+                  <td className="py-4 text-night-graphite">Implementação 100% Personalizada</td>
                   <td className="text-center py-4 px-4">
                     <span className="text-green-600 text-xl">✅</span>
                   </td>
@@ -202,18 +180,12 @@ const Diferenciais = () => {
           </div>
 
           <div className="text-center mt-8">
-            <Button 
-              variant="premium" 
-              size="lg"
-              onClick={() => scrollToSection('cta')}
-            >
+            <Button variant="premium" size="lg" onClick={() => scrollToSection('cta')}>
               Quero a Melhor Solução
             </Button>
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Diferenciais;

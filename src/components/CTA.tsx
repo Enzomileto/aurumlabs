@@ -3,19 +3,8 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { 
-  Calendar,
-  CheckCircle,
-  Clock,
-  Phone,
-  Mail,
-  MapPin,
-  ArrowRight,
-  Star,
-  Gift
-} from "lucide-react";
+import { Calendar, CheckCircle, Clock, Phone, Mail, MapPin, ArrowRight, Star, Gift } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
-
 const CTA = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -24,15 +13,16 @@ const CTA = () => {
     clinic: "",
     message: ""
   });
-  const { toast } = useToast();
-
+  const {
+    toast
+  } = useToast();
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     // Simulate form submission
     toast({
       title: "Reunião Agendada! 🎉",
-      description: "Entraremos em contato em até 2 horas para confirmar sua reunião de triagem.",
+      description: "Entraremos em contato em até 2 horas para confirmar sua reunião de triagem."
     });
 
     // Reset form
@@ -44,16 +34,8 @@ const CTA = () => {
       message: ""
     });
   };
-
-  const benefits = [
-    "Análise gratuita do potencial da sua clínica",
-    "Demonstração personalizada da IA",
-    "Proposta de ROI específica para seu negócio",
-    "Sem compromisso ou taxa de implementação"
-  ];
-
-  return (
-    <section id="cta" className="py-20 bg-ivory-glow">
+  const benefits = ["Análise gratuita do potencial da sua clínica", "Demonstração personalizada da IA", "Proposta de ROI específica para seu negócio", "Sem compromisso ou taxa de implementação"];
+  return <section id="cta" className="py-20 bg-ivory-glow">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">
@@ -103,28 +85,20 @@ const CTA = () => {
                     <label className="font-body text-sm font-medium text-night-graphite mb-2 block">
                       Nome Completo *
                     </label>
-                    <Input
-                      type="text"
-                      placeholder="Seu nome"
-                      value={formData.name}
-                      onChange={(e) => setFormData({...formData, name: e.target.value})}
-                      required
-                      className="border-gold-core/30 focus:border-gold-core"
-                    />
+                    <Input type="text" placeholder="Seu nome" value={formData.name} onChange={e => setFormData({
+                    ...formData,
+                    name: e.target.value
+                  })} required className="border-gold-core/30 focus:border-gold-core" />
                   </div>
                   
                   <div>
                     <label className="font-body text-sm font-medium text-night-graphite mb-2 block">
                       E-mail *
                     </label>
-                    <Input
-                      type="email"
-                      placeholder="seu@email.com"
-                      value={formData.email}
-                      onChange={(e) => setFormData({...formData, email: e.target.value})}
-                      required
-                      className="border-gold-core/30 focus:border-gold-core"
-                    />
+                    <Input type="email" placeholder="seu@email.com" value={formData.email} onChange={e => setFormData({
+                    ...formData,
+                    email: e.target.value
+                  })} required className="border-gold-core/30 focus:border-gold-core" />
                   </div>
                 </div>
 
@@ -133,28 +107,20 @@ const CTA = () => {
                     <label className="font-body text-sm font-medium text-night-graphite mb-2 block">
                       WhatsApp *
                     </label>
-                    <Input
-                      type="tel"
-                      placeholder="(11) 99999-9999"
-                      value={formData.phone}
-                      onChange={(e) => setFormData({...formData, phone: e.target.value})}
-                      required
-                      className="border-gold-core/30 focus:border-gold-core"
-                    />
+                    <Input type="tel" placeholder="(11) 99999-9999" value={formData.phone} onChange={e => setFormData({
+                    ...formData,
+                    phone: e.target.value
+                  })} required className="border-gold-core/30 focus:border-gold-core" />
                   </div>
                   
                   <div>
                     <label className="font-body text-sm font-medium text-night-graphite mb-2 block">
                       Nome da Clínica *
                     </label>
-                    <Input
-                      type="text"
-                      placeholder="Clínica Exemplo"
-                      value={formData.clinic}
-                      onChange={(e) => setFormData({...formData, clinic: e.target.value})}
-                      required
-                      className="border-gold-core/30 focus:border-gold-core"
-                    />
+                    <Input type="text" placeholder="Clínica Exemplo" value={formData.clinic} onChange={e => setFormData({
+                    ...formData,
+                    clinic: e.target.value
+                  })} required className="border-gold-core/30 focus:border-gold-core" />
                   </div>
                 </div>
 
@@ -162,12 +128,10 @@ const CTA = () => {
                   <label className="font-body text-sm font-medium text-night-graphite mb-2 block">
                     Conte-nos sobre sua clínica (opcional)
                   </label>
-                  <Textarea
-                    placeholder="Principais procedimentos, número de atendimentos mensais, principais desafios..."
-                    value={formData.message}
-                    onChange={(e) => setFormData({...formData, message: e.target.value})}
-                    className="border-gold-core/30 focus:border-gold-core min-h-[100px]"
-                  />
+                  <Textarea placeholder="Principais procedimentos, número de atendimentos mensais, principais desafios..." value={formData.message} onChange={e => setFormData({
+                  ...formData,
+                  message: e.target.value
+                })} className="border-gold-core/30 focus:border-gold-core min-h-[100px]" />
                 </div>
 
                 <Button type="submit" variant="premium" size="lg" className="w-full">
@@ -195,14 +159,12 @@ const CTA = () => {
                 </h3>
                 
                 <div className="space-y-4">
-                  {benefits.map((benefit, index) => (
-                    <div key={index} className="flex items-start gap-3">
+                  {benefits.map((benefit, index) => <div key={index} className="flex items-start gap-3">
                       <CheckCircle className="h-5 w-5 text-gold-core mt-0.5 flex-shrink-0" />
                       <span className="font-body text-night-graphite/80">
                         {benefit}
                       </span>
-                    </div>
-                  ))}
+                    </div>)}
                 </div>
 
                 <div className="mt-6 p-4 bg-gold-core/10 rounded-lg border border-gold-core/20">
@@ -231,7 +193,7 @@ const CTA = () => {
                   <div className="flex items-center gap-3">
                     <Phone className="h-5 w-5 text-gold-core" />
                     <div>
-                      <div className="font-body font-medium text-night-graphite">(11) 99999-9999</div>
+                      <div className="font-body font-medium text-night-graphite">(21) 99363-7955</div>
                       <div className="font-body text-sm text-night-graphite/60">
                         WhatsApp - Resposta em até 5 min
                       </div>
@@ -241,7 +203,7 @@ const CTA = () => {
                   <div className="flex items-center gap-3">
                     <Mail className="h-5 w-5 text-gold-core" />
                     <div>
-                      <div className="font-body font-medium text-night-graphite">contato@aurum.ai</div>
+                      <div className="font-body font-medium text-night-graphite">contatoaurumlabs@gmail.com</div>
                       <div className="font-body text-sm text-night-graphite/60">
                         E-mail comercial
                       </div>
@@ -251,7 +213,7 @@ const CTA = () => {
                   <div className="flex items-center gap-3">
                     <MapPin className="h-5 w-5 text-gold-core" />
                     <div>
-                      <div className="font-body font-medium text-night-graphite">São Paulo, SP</div>
+                      <div className="font-body font-medium text-night-graphite">Rio de Janeiro, RJ</div>
                       <div className="font-body text-sm text-night-graphite/60">
                         Atendemos todo Brasil
                       </div>
@@ -276,8 +238,6 @@ const CTA = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default CTA;
