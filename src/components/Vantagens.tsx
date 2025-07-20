@@ -5,7 +5,7 @@ const Vantagens = () => {
     icon: Clock,
     title: "Perda de Leads por Demora",
     description: "73% dos leads desistem quando não recebem resposta em até 1 hora",
-    impact: "Perda de R$ 15.000+ mensais"
+    impact: "Perda significativa de receita"
   }, {
     icon: Users,
     title: "Equipe Sobrecarregada",
@@ -30,13 +30,13 @@ const Vantagens = () => {
   }, {
     icon: DollarSign,
     title: "ROI Comprovado",
-    description: "Cada R$ 1 investido retorna em média R$ 8 em novos faturamentos",
-    result: "ROI de 800%"
+    description: "Cada real investido retorna em média 8 vezes o valor em novos faturamentos",
+    result: "ROI comprovado"
   }, {
     icon: TrendingUp,
     title: "Escalabilidade",
-    description: "Atende milhares de leads simultaneamente sem custo adicional",
-    result: "Crescimento ilimitado"
+    description: "Atende milhares de leads simultaneamente sem limitações",
+    result: "Crescimento escalável"
   }, {
     icon: Shield,
     title: "Dados Seguros",
@@ -133,21 +133,21 @@ const Vantagens = () => {
           </div>
         </div>
 
-        {/* ROI Calculator */}
+        {/* Resultados */}
         <div className="mt-20 bg-gradient-card rounded-2xl p-8 md:p-12 text-center shadow-elegant">
           <h3 className="font-heading text-3xl md:text-4xl text-night-graphite mb-6">
-            Calculadora de ROI
+            Resultados Comprovados
           </h3>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             <div className="bg-red-100 rounded-xl p-6 border-l-4 border-red-400">
               <h4 className="font-heading text-xl text-red-700 mb-4">Sem Aurum (Perdas)</h4>
               <div className="space-y-2 text-red-600 font-body">
-                <div>• 100 leads perdidos/mês: <strong>R$ 15.000</strong></div>
-                <div>• Consultas não qualificadas: <strong>R$ 8.000</strong></div>
-                <div>• Horas extras da equipe: <strong>R$ 5.000</strong></div>
+                <div>• Leads perdidos por demora no atendimento</div>
+                <div>• Consultas não qualificadas ocupando agenda</div>
+                <div>• Sobrecarga da equipe com tarefas repetitivas</div>
                 <div className="border-t pt-2 mt-4">
-                  <strong>Total perdido: R$ 28.000/mês</strong>
+                  <strong>Resultado: Baixa conversão e desperdício de recursos</strong>
                 </div>
               </div>
             </div>
@@ -155,11 +155,11 @@ const Vantagens = () => {
             <div className="bg-green-100 rounded-xl p-6 border-l-4 border-gold-core">
               <h4 className="font-heading text-xl text-green-700 mb-4">Com Aurum (Ganhos)</h4>
               <div className="space-y-2 text-green-600 font-body">
-                <div>• Leads capturados: <strong>+R$ 45.000</strong></div>
-                <div>• Conversão otimizada: <strong>+R$ 25.000</strong></div>
-                <div>• Economia operacional: <strong>+R$ 12.000</strong></div>
+                <div>• Captura automática de 100% dos leads</div>
+                <div>• Qualificação inteligente de prospects</div>
+                <div>• Automação de processos operacionais</div>
                 <div className="border-t pt-2 mt-4">
-                  <strong>Total ganho: R$ 82.000/mês</strong>
+                  <strong>Resultado: Alta conversão e eficiência máxima</strong>
                 </div>
               </div>
             </div>
@@ -167,9 +167,9 @@ const Vantagens = () => {
           
           <div className="mt-8 p-6 bg-gold-core/10 rounded-xl border border-gold-core/30">
             <div className="text-3xl font-bold text-gold-core mb-2">
-              R$ 110.000 de diferença mensal
+              Transformação completa do seu negócio
             </div>
-            <div className="text-night-graphite/80 font-body">ROI: 4.400%</div>
+            <div className="text-night-graphite/80 font-body">Resultados mensuráveis desde o primeiro dia</div>
           </div>
         </div>
       </div>

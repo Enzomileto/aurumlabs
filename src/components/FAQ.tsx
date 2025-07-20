@@ -32,8 +32,8 @@ const FAQ = () => {
       answer: "O processo é super simples: 1) Reunião de alinhamento (30 min), 2) Configuração personalizada da IA com dados da sua clínica (4h), 3) Testes e ajustes (2h), 4) Treinamento da equipe (1h), 5) Go-live! Todo o processo leva apenas 24 horas e nossa equipe cuida de tudo para você."
     },
     {
-      question: "Quanto custa e qual o retorno do investimento?",
-      answer: "O investimento é de R$ 2.500/mês, sem taxa de setup. Nossos clientes veem ROI médio de 800% no primeiro mês. Uma clínica média que perde 50 leads/mês (R$ 7.500 em potencial perdido) recupera o investimento em menos de 10 dias e ainda economiza nos custos operacionais."
+      question: "Como funciona o modelo de contratação?",
+      answer: "Trabalhamos com um modelo de mensalidade simples e transparente, sem taxas de setup. Os valores são personalizados conforme o tamanho e necessidades da sua clínica. Durante nossa reunião de diagnóstico, apresentamos uma proposta sob medida para o seu perfil. Nossos clientes veem retorno do investimento já no primeiro mês."
     },
     {
       question: "A IA realmente parece humana nas conversas?",
