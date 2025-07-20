@@ -14,7 +14,7 @@ const Demonstracao = () => {
     {
       icon: MessageCircle,
       title: "Recepção Inteligente",
-      description: "IA recebe e qualifica leads automaticamente via WhatsApp, Instagram e site",
+      description: "IA recebe e qualifica leads automaticamente via WhatsApp",
       features: ["Resposta instantânea", "Qualificação de lead", "Coleta de dados"]
     },
     {
