@@ -14,7 +14,7 @@ const Header = () => {
     setIsMenuOpen(false);
   };
   return <header className="fixed top-0 w-full bg-ivory-glow/95 backdrop-blur-sm z-50 border-b border-gold-core/20">
-      <div className="container py-0 my-[10px] mx-0 px-[16px]">
+      <div className="container mx-auto py-0 my-[10px] px-[16px]">
         <div className="flex justify-between items-center">
           {/* Logo */}
           <div className="flex items-center space-x-3">
