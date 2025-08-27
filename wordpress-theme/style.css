@@ -1,0 +1,409 @@
+/*
+Theme Name: Aurum Estética
+Description: Tema premium para clínicas de estética com design elegante e funcionalidades avançadas
+Author: Aurum
+Version: 1.0
+*/
+
+/* Reset e Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Cores principais */
+  --night-graphite: hsl(210, 15%, 8%);
+  --ivory-glow: hsl(45, 40%, 95%);
+  --gold-core: hsl(45, 90%, 65%);
+  --gold-light: hsl(45, 85%, 75%);
+  --muted: hsl(210, 10%, 15%);
+  
+  /* Gradientes */
+  --gradient-hero: linear-gradient(135deg, var(--night-graphite), var(--muted));
+  --gradient-gold: linear-gradient(135deg, var(--gold-core), var(--gold-light));
+  
+  /* Sombras */
+  --shadow-gold: 0 10px 30px -10px hsla(45, 90%, 65%, 0.3);
+  
+  /* Tipografia */
+  --font-heading: 'DM Serif Display', serif;
+  --font-body: 'Poppins', sans-serif;
+}
+
+body {
+  font-family: var(--font-body);
+  line-height: 1.6;
+  color: var(--ivory-glow);
+  background: var(--night-graphite);
+}
+
+/* Cabeçalho */
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: rgba(33, 37, 41, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 1rem 0;
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+}
+
+.site-logo {
+  font-family: var(--font-heading);
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--gold-core);
+  text-decoration: none;
+}
+
+.main-nav ul {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+.main-nav a {
+  color: var(--ivory-glow);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.main-nav a:hover {
+  color: var(--gold-core);
+}
+
+/* Botões */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: none;
+}
+
+.btn-primary {
+  background: var(--gradient-gold);
+  color: var(--night-graphite);
+  box-shadow: var(--shadow-gold);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 15px 40px -15px hsla(45, 90%, 65%, 0.4);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--gold-core);
+  border: 2px solid var(--gold-core);
+}
+
+.btn-outline:hover {
+  background: var(--gold-core);
+  color: var(--night-graphite);
+}
+
+/* Hero Section */
+.hero-section {
+  min-height: 100vh;
+  background: var(--gradient-hero);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  padding: 8rem 2rem 4rem;
+}
+
+.hero-content {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(255, 193, 7, 0.1);
+  border: 1px solid rgba(255, 193, 7, 0.3);
+  border-radius: 2rem;
+  padding: 0.5rem 1rem;
+  margin-bottom: 2rem;
+  color: var(--gold-core);
+  font-weight: 500;
+}
+
+.hero-title {
+  font-family: var(--font-heading);
+  font-size: 3.5rem;
+  font-weight: bold;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  color: var(--ivory-glow);
+}
+
+.hero-title .highlight {
+  color: var(--gold-core);
+  display: block;
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  color: rgba(248, 249, 250, 0.9);
+  margin-bottom: 3rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-number {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--gold-core);
+  margin-bottom: 0.5rem;
+}
+
+.stat-label {
+  color: rgba(248, 249, 250, 0.8);
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 4rem;
+}
+
+/* Seções de conteúdo */
+.content-section {
+  padding: 6rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-title {
+  font-family: var(--font-heading);
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: var(--ivory-glow);
+}
+
+.section-subtitle {
+  font-size: 1.1rem;
+  text-align: center;
+  color: rgba(248, 249, 250, 0.8);
+  margin-bottom: 4rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Cards */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1rem;
+  padding: 2rem;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.card-icon {
+  width: 4rem;
+  height: 4rem;
+  background: var(--gradient-gold);
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  color: var(--night-graphite);
+  font-size: 1.5rem;
+}
+
+.card-title {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--ivory-glow);
+}
+
+.card-description {
+  color: rgba(248, 249, 250, 0.8);
+  line-height: 1.6;
+}
+
+/* FAQ */
+.faq-item {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+  overflow: hidden;
+}
+
+.faq-question {
+  width: 100%;
+  text-align: left;
+  background: transparent;
+  border: none;
+  padding: 1.5rem;
+  color: var(--ivory-glow);
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faq-answer {
+  padding: 0 1.5rem 1.5rem;
+  color: rgba(248, 249, 250, 0.8);
+  line-height: 1.6;
+}
+
+/* Rodapé */
+.site-footer {
+  background: var(--muted);
+  padding: 4rem 2rem 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.footer-logo {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  color: var(--gold-core);
+  margin-bottom: 1rem;
+}
+
+.footer-description {
+  color: rgba(248, 249, 250, 0.8);
+  margin-bottom: 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 2rem;
+  margin-top: 2rem;
+  color: rgba(248, 249, 250, 0.6);
+  font-size: 0.9rem;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.1rem;
+  }
+  
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .main-nav {
+    display: none;
+  }
+  
+  .cards-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Estilos para posts do blog */
+.post-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.post-title {
+  font-family: var(--font-heading);
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: var(--ivory-glow);
+}
+
+.post-meta {
+  color: rgba(248, 249, 250, 0.6);
+  margin-bottom: 2rem;
+  font-size: 0.9rem;
+}
+
+.post-content p {
+  margin-bottom: 1.5rem;
+  line-height: 1.7;
+}
+
+.post-content h2,
+.post-content h3 {
+  font-family: var(--font-heading);
+  color: var(--gold-core);
+  margin: 2rem 0 1rem;
+}
+
+.post-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  margin: 2rem 0;
+}
